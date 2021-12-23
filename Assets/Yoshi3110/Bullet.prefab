@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1127243792186003787}
   - component: {fileID: 1127243792186003784}
   - component: {fileID: 1127243792186003785}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -60,6 +60,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -158,7 +159,7 @@ GameObject:
   - component: {fileID: 1127243792191459476}
   - component: {fileID: 1127243792191459478}
   - component: {fileID: 1127243792191459479}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: "\u304B\u3059\u3081\u308B\u5224\u5B9A"
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -190,6 +191,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -227,7 +229,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1127243792191459479
