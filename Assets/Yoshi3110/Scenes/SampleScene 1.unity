@@ -3741,7 +3741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9173540682845552648, guid: 74f3187935e76494c9cae16d00e75bc5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173540682845552651, guid: 74f3187935e76494c9cae16d00e75bc5, type: 3}
       propertyPath: m_RootOrder
@@ -3849,6 +3849,7 @@ GameObject:
   - component: {fileID: 1190481671}
   - component: {fileID: 1190481670}
   - component: {fileID: 1190481669}
+  - component: {fileID: 1190481679}
   - component: {fileID: 1190481674}
   - component: {fileID: 1190481677}
   - component: {fileID: 1190481675}
@@ -4159,6 +4160,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &1190481679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190481668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7923c63d751cc0046a8d6498517ebf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackingBullet: {fileID: 749337440784238998, guid: a0b918dc2bcc9e74eab2e5cd71246e8c, type: 3}
+  spawnPos: {x: 0, y: 0.8, z: 0}
 --- !u!1 &1197631888
 GameObject:
   m_ObjectHideFlags: 0
@@ -4574,7 +4589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9173540682845552648, guid: 74f3187935e76494c9cae16d00e75bc5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173540682845552651, guid: 74f3187935e76494c9cae16d00e75bc5, type: 3}
       propertyPath: m_RootOrder
