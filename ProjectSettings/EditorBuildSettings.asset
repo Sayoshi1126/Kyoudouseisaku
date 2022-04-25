@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sayoshi1126/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Sayoshi1126/Scenes/TitleScene.unity
+    guid: 971d1b6c5d58d674da6ce8f4cfb37529
   m_configObjects: {}

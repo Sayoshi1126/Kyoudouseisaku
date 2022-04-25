@@ -21,8 +21,9 @@ public class ControllerManager : SingletonMonoBehaviour<ControllerManager>
 
     [SerializeField] func [] joyStickButton = new func[9];
 
-    [HideInInspector] public bool jumpButtonDown;
-    [HideInInspector] public bool jumpButtonUp;
+    [HideInInspector] public bool jumpButtonDown { get; set; }
+    [HideInInspector] public bool jumpButtonUp { get; set; }
+
     void Start()
     {
 

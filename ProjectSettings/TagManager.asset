@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - Bullet
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -17,11 +18,11 @@ TagManager:
   - bullet
   - stage
   - enemy
-  - 
-  - 
-  - 
-  - 
-  - 
+  - stageCheck
+  - attack
+  - hitBox
+  - cameraField
+  - cameraConfinerField
   - 
   - 
   - 

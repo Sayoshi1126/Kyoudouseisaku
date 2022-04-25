@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
 
     [HideInInspector] float vx, vy;
-    public new Rigidbody2D rigidbody2D;
+    public new Rigidbody2D _rigidbody2D;
     public float walkSpeed = 2;
 
     [SerializeField] bool edgeTurn;
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -65,6 +65,6 @@ public class Enemy : MonoBehaviour
     void velocityXUpdate()
     {
         vx = walkSpeed;
-        rigidbody2D.velocity = new Vector2(vx*transform.localScale.x,rigidbody2D.velocity.y);
+        _rigidbody2D.velocity = new Vector2(vx*transform.localScale.x,_rigidbody2D.velocity.y);
     }
 }
