@@ -72,6 +72,11 @@ public class Jumper : PlayerMaster
     [SerializeField] private Vector2 _chaseTackleHitStep;
     [SerializeField] private float _chaseTackleLengthMax;
 
+    [SerializeField] private Vector2 _wallSlideGunPos;
+    [SerializeField] private Vector2 _normalGunPos;
+    [SerializeField] private Vector2 _runningGunPos;
+    [SerializeField] private Vector2 _jumpingGunPos;
+
     private int _playerDir;
     private int _airJump;
     private int _airAttack;
@@ -286,7 +291,7 @@ public class Jumper : PlayerMaster
             vy = 0;
         }
 
-        if (_rigidbody2D.velocity.y < -max_vy&&!_onGround)//y軸の速度をmaxVy以下にする
+        if (_rigidbody2D.velocity.y < -max_vy&&!_onGround)//y軸の速度をmaxVy以下にするw
         {
             vy = -max_vy;
         }
@@ -452,17 +457,17 @@ public class Jumper : PlayerMaster
 
 
             //ジャンプボタンを押せばジャンプのアクションをスタートさせる
-            if (Input.GetKeyDown(KeyCode.UpArrow) || ControllerManager.Instance.jumpButtonDown)
+            if (Input.GetKeyDown(ControllerManager.Instance.JumpButton))
             {
                 JumpStart();
                 _propellingTime = 0;
             }
-            else if (Input.GetKeyUp(KeyCode.UpArrow) || ControllerManager.Instance.jumpButtonUp)//ジャンプボタンを離したときジャンプキャンセルで上昇を止める
+            else if (Input.GetKeyUp(ControllerManager.Instance.JumpButton))//ジャンプボタンを離したときジャンプキャンセルで上昇を止める
             {
                 JumpCanceled();
                 _propelling = false;
             }
-            else if (_jumping && !Input.GetKey(KeyCode.UpArrow))
+            else if (_jumping && !Input.GetKey(ControllerManager.Instance.JumpButton))
             {
                 JumpCanceled();
             }
@@ -474,7 +479,7 @@ public class Jumper : PlayerMaster
             //}
 
             //攻撃ボタンで攻撃アクションをスタートさせる
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(ControllerManager.Instance.AttackButton))
             {
                 if (_onGround)
                 {
@@ -488,7 +493,7 @@ public class Jumper : PlayerMaster
             }
 
             //銃撃ボタンで銃を打つアクションをスタートさせはなしたとき銃撃を止める
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetKeyDown(ControllerManager.Instance.ShotButton))
             {
                 if (_anim.GetCurrentAnimatorStateInfo(0).IsName("run")&&_playerDir!=0)
                 {
@@ -496,9 +501,10 @@ public class Jumper : PlayerMaster
                     _anim.Play("run_gun",0,_anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
                 }
                 _anim.SetBool("gun", true);
+
                 InstanteateBullet();
             }
-            else if (Input.GetKeyUp(KeyCode.V))
+            else if (Input.GetKeyUp(ControllerManager.Instance.ShotButton))
             {
                 if (_anim.GetCurrentAnimatorStateInfo(0).IsName("run_gun") && _playerDir != 0)
                 {
@@ -511,12 +517,12 @@ public class Jumper : PlayerMaster
         else//特殊な状況のみプレイヤーの入力を受け付ける場合(例:攻撃の後隙(!_canControl)の間に入力を受け付けてコンボ攻撃に繋げるとき) 
         {
             _playerDir = 0;
-            if (Input.GetKeyDown(KeyCode.C)&& WitchTime)//ジャスト回避成功後にたいあたりボタンで体当たりアクションを開始
+            if (Input.GetKeyDown(ControllerManager.Instance.AttackButton)&& WitchTime)//ジャスト回避成功後にたいあたりボタンで体当たりアクションを開始
             {
                 _anim.SetTrigger("chase");
             }
 
-            if (Input.GetKeyDown(KeyCode.C)&&_attackBufferTime)//攻撃アクションのコンボ時の先行入力受付時
+            if (Input.GetKeyDown(ControllerManager.Instance.AttackButton) &&_attackBufferTime)//攻撃アクションのコンボ時の先行入力受付時
             {
                 if (_onGround)
                 {
@@ -913,7 +919,25 @@ public class Jumper : PlayerMaster
     void InstanteateBullet()
     {
         bulletObject[bulletNum].gameObject.SetActive(true);
-        bulletObject[bulletNum].SetBulletDirection(transform.localScale);
+        var gunDirection = _onWall == true ? -1 : 1;
+        Vector2 gunPosition;
+        if(Jumping)
+        {
+            gunPosition = _jumpingGunPos;
+        }else if (_onWall)
+        {
+            gunPosition = _wallSlideGunPos;
+        }else if (Running)
+        {
+            gunPosition = _runningGunPos;
+        }
+        else
+        {
+            gunPosition = _normalGunPos;
+        }
+
+        bulletObject[bulletNum].SetBulletDirection(new Vector2(transform.localScale.x*gunDirection,transform.localScale.y));
+        GunPosition.transform.localPosition = gunPosition;
         bulletObject[bulletNum].gameObject.transform.position = GunPosition.transform.position;
         bulletNum++;
         if (bulletNum >= bulletObject.Length)

@@ -14,13 +14,13 @@ public class SceneLoaderTest : SingletonMonoBehaviour<SceneLoaderTest>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneLoader.LoadScene(GameScenes.SampleScene);
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneLoader.LoadScene(GameScenes.TitleScene);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneLoader.LoadScene(GameScenes.SampleScene);
         }
     }
 }

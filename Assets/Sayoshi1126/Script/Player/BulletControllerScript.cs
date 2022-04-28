@@ -31,6 +31,10 @@ public class BulletControllerScript : MonoBehaviour
             enemy.Damaged(gameObject.name, new Vector2(0,0), ATKValue);
             gameObject.SetActive(false);
         }
+        else if(collision.tag == "ground")
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void SetBulletDirection(Vector2 direction)
