@@ -4,8 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// x軸又はy軸への焦点の移動を制限する際に使用するオブジェクト
-/// 制限する場合、カメラの焦点がこのオブジェクトに向き、オブジェクトはx軸又はy軸に対してのみ
-/// プレイヤーと同じ座標へ移動するようになる
+/// このオブジェクトの範囲に入ったプレイヤーオブジェクトの座標を追って、x軸もしくはy軸に沿った動きをする
 /// 動きを見たいときはSpriteRendererをオンにする
 /// </summary>
 public class CameraFreezePivotObject : MonoBehaviour
@@ -46,7 +45,14 @@ public class CameraFreezePivotObject : MonoBehaviour
         }
     }
 
-    public void SetActiveFocusObj(bool freezeX,bool freezeY, bool state, GameObject target)
+    /// <summary>
+    /// カメラに追わせるためのこのオブジェクトをアクティブにする
+    /// </summary>
+    /// <param name="freezeX"></param>
+    /// <param name="freezeY"></param>
+    /// <param name="state"></param>
+    /// <param name="target"></param>
+    public void SetActiveFocusObj(bool freezeX, bool freezeY, bool state, GameObject target)
     {
         gameObject.SetActive(state);
         _targetObj = target;

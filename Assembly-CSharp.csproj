@@ -456,7 +456,7 @@
     <Compile Include="Assets\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProVHayabusaMacNativeProfile.cs" />
     <Compile Include="Assets\InControl\Source\iCade\ICadeNative.cs" />
     <Compile Include="Assets\InControl\Source\Device\InputDeviceDriverType.cs" />
-    <Compile Include="Assets\Sayoshi1126\Script\Player\BulletController.cs" />
+    <Compile Include="Assets\Sayoshi1126\Script\Test\BulletController.cs" />
     <Compile Include="Assets\InControl\Source\Touch\TouchPool.cs" />
     <Compile Include="Assets\InControl\Source\Native\DeviceProfiles\Generated\MadCatzMLGFightStickTEMacNativeProfile.cs" />
     <Compile Include="Assets\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9021AndroidUnityProfile.cs" />
@@ -558,7 +558,6 @@
     <Compile Include="Assets\InControl\Source\Native\DeviceProfiles\Generated\HarmonixDrumKitMacNativeProfile.cs" />
     <Compile Include="Assets\InControl\Source\Unity\DeviceProfiles\Android\RazerKishiAndroidUnityProfile.cs" />
     <Compile Include="Assets\InControl\Source\Native\DeviceProfiles\Mac\SteelseriesNimbusMacNativeProfile.cs" />
-    <Compile Include="Assets\Sayoshi1126\Script\Cinemachine\CinemachineFreezePivot.cs" />
     <Compile Include="Assets\InControl\Source\Unity\DeviceProfiles\Android\BeboncoolDA015CAAndroidUnityProfile.cs" />
     <Compile Include="Assets\InControl\Source\Unity\DeviceProfiles\Linux\LogitechF310LinuxUnityProfile.cs" />
     <Compile Include="Assets\InControl\Source\Native\DeviceProfiles\Generated\InjusticeFightStickMacNativeProfile.cs" />

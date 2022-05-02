@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// ‰ñ”ğƒAƒNƒVƒ‡ƒ“‚ÅUŒ‚‚ğ‚©‚·‚ß‚½‚Ìˆ—
+/// –¢Š®¬
 /// </summary>
 public class AvoidColliderScript : MonoBehaviour
 {

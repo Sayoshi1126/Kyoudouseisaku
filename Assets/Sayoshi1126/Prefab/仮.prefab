@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4dedd8134fe664c488c4956a50edf771, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f89899fea49653040abe015f9a12afec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2f06b6ea67a8042b105590a9623e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlyingType: 0
   _bulletPrefab: {fileID: 0}
   _target: {fileID: 0}
   span: 1
@@ -107,6 +108,8 @@ MonoBehaviour:
   _axNormal: 0.1
   _axDamaged: 0.1
   _maxWalkSpeed: 2
+  _maxVerticalSpeed: 0
+  _turnTime: 0
   _edgeTurn: 1
   _wallTurn: 1
   _wallRayOffsetX: 0.64

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+/// <summary>
+/// cinemacineを基に機能を拡張
+/// </summary>
 public class CinemachineVirturalCameraCus : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,11 +12,13 @@ public class CinemachineVirturalCameraCus : MonoBehaviour
     private Transform _focusTarget;
     private Jumper _player;
     private CinemachineFramingTransposer _transposer;
-    public float FocusDistance = 0.3f;
-    public float FocusSpeed = 0.01f;
+    public float FocusDistance = 0.3f;//キャラクターの進行方向へ動く焦点とキャラクターの距離
+    public float FocusSpeed = 0.01f;//焦点の移動速度
     private float _focus = 0.5f;
 
-    public bool ForwardFocus = true;
+    public bool ForwardFocus = true;//焦点を進行方向によって移動させるか
+    
+    //未実装
     public bool ProjectedFocus = false;
     public bool PlatformSnapping = true;
 

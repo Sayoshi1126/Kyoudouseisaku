@@ -4,7 +4,8 @@ using UnityEngine;
 using Script.Utilities;
 
 /// <summary>
-/// UIにアタッチして使う
+/// Buttonにアタッチして使う
+/// 今後Button以外にも応用予定
 /// </summary>
 public class UIFunciton : MonoBehaviour
 {

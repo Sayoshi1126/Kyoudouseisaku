@@ -16,8 +16,8 @@ public class HitBoxScript : MonoBehaviour
     [SerializeField] public float Vx;
     [SerializeField] public float FroationgPower;
     [SerializeField] public float Ax;
-    [SerializeField] private float attackForceX;
-    [SerializeField] private float attackForceY;
+    [SerializeField] private float _attackForceX;
+    [SerializeField] private float _attackForceY;
     [SerializeField] public int ATKValue;
     [SerializeField] private int _hitStopFrame;
     [SerializeField] private GameObject _player;
@@ -90,12 +90,12 @@ public class HitBoxScript : MonoBehaviour
         if (collision.tag == "enemy"&&TargetTag == "enemy")
         {
             EnemyScriptMaster enemy = TargetObj.GetComponent<EnemyScriptMaster>();
-            enemy.Damaged(gameObject.name,new Vector2(attackForceX*_player.transform.localScale.x,attackForceY),ATKValue);
+            enemy.Damaged(gameObject.name,new Vector2(_attackForceX*_player.transform.localScale.x,_attackForceY),ATKValue);
             TimeScaleManager.Instance.HitStop(_hitStopFrame);
         }else if(collision.tag == "Player"&&TargetTag == "Player")
         {
             Jumper player = TargetObj.GetComponent<Jumper>();
-            player.Damaged(gameObject.name, new Vector2(attackForceX * _player.transform.localScale.x, attackForceY), ATKValue );
+            player.Damaged(gameObject.name, new Vector2(_attackForceX * _player.transform.localScale.x, _attackForceY), ATKValue );
         }
     }
 

@@ -7,7 +7,9 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/// <summary>
+///　実際のシーン遷移を行う機構
+/// </summary>
 namespace Script.Utilities.SceneTransition{
     public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
     {

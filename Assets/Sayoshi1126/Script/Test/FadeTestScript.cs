@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/// <summary>
+/// シーン遷移機構のテスト用
+/// </summary>
 public class FadeTestScript : MonoBehaviour
 {
     public Fade fade;

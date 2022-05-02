@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ÚG‚µ‚½•¨‘Ì‚ª‰½‚©’²‚×‚é
+/// </summary>
 public class CheckColliderScript : MonoBehaviour
 {
     // Start is called before the first frame update

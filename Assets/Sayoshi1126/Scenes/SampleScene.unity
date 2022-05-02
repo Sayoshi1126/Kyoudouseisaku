@@ -6774,8 +6774,8 @@ MonoBehaviour:
   Vx: 0
   FroationgPower: 0
   Ax: 0
-  attackForceX: 0
-  attackForceY: 0
+  _attackForceX: 0
+  _attackForceY: 0
   ATKValue: 0
   _hitStopFrame: 0
   _player: {fileID: 0}
@@ -8201,13 +8201,13 @@ MonoBehaviour:
   _allowWallJump: 1
   _allowWallSlide: 1
   _maxVx: 8
-  max_vy: 15
-  _jumpPower: 700
+  max_vy: 20
+  _jumpPower: 600
   _jumpVelocityBonus: 0
   _jumpAnticipationFrames: 0
   _vxAdjustmentAtTakeoff: 0
   _maxPropellingFrames: 0
-  _gravityrising: 3
+  _gravityrising: 2
   _gravityFalling: 4.5
   _verticalSpeedSustainLevel: 0.3
   _axNormal: 0.4
@@ -8852,8 +8852,8 @@ MonoBehaviour:
   Vx: 7
   FroationgPower: 0
   Ax: 0.3
-  attackForceX: 200
-  attackForceY: 0
+  _attackForceX: 200
+  _attackForceY: 0
   ATKValue: 30
   _hitStopFrame: 1
   _player: {fileID: 1190481668}
@@ -9870,8 +9870,8 @@ MonoBehaviour:
   Vx: 10
   FroationgPower: 30
   Ax: 0.3
-  attackForceX: 300
-  attackForceY: 0
+  _attackForceX: 0
+  _attackForceY: 0
   ATKValue: 50
   _hitStopFrame: 2
   _player: {fileID: 1190481668}
@@ -10729,8 +10729,8 @@ MonoBehaviour:
   Vx: 7
   FroationgPower: 0
   Ax: 0.3
-  attackForceX: 200
-  attackForceY: 0
+  _attackForceX: 200
+  _attackForceY: 0
   ATKValue: 30
   _hitStopFrame: 1
   _player: {fileID: 1190481668}
@@ -11378,8 +11378,8 @@ MonoBehaviour:
   Vx: 7
   FroationgPower: 0
   Ax: 0.3
-  attackForceX: 400
-  attackForceY: 0
+  _attackForceX: 500
+  _attackForceY: 0
   ATKValue: 40
   _hitStopFrame: 6
   _player: {fileID: 1190481668}

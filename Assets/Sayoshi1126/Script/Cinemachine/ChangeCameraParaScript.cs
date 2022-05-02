@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
-
+/// <summary>
+/// 範囲内に入ったプレイヤーを追従するcinemacineCameraのパラメタを変更する
+/// </summary>
 public class ChangeCameraParaScript : MonoBehaviour
 {
     // Start is called before the first frame update

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
-
+/// <summary>
+/// ñ¢äÆê¨
+/// </summary>
 public class BulletController : MonoBehaviour
 {
     GameObject bullet_object;
